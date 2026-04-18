@@ -8,6 +8,7 @@ import {
 } from './EmblaCarouselArrowButtons';
 import cryptoWatch from '../videos/cryptoWatch.mp4';
 import asteroids from '../videos/asteroids.mp4';
+import mapBox from '../videos/mapBox.mp4';
 import './EmblaCarousel.css';
 import spaceBgProject from '../images/spaceBgProject.jpg';
 import { motion } from 'framer-motion';
@@ -18,7 +19,7 @@ const EmblaCarousel = (props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Fade()])
 
   const slides = [{ src: asteroids, title: 'Asteroid Game' },
-    { src: cryptoWatch, title: 'CryptoWatch' }]
+    { src: cryptoWatch, title: 'CryptoWatch' },{src: mapBox, title:'Property Management'}]
   const {
     prevBtnDisabled,
     nextBtnDisabled,
