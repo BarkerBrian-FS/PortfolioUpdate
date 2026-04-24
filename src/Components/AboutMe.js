@@ -10,7 +10,7 @@ const AboutMe = () => {
         offset: ['start start','end start'],
     })
     const backgroundY = useTransform(scrollYProgress, [0,1 ], ['0%', '-50%']);
-    const textY = useTransform(scrollYProgress, [0,1], ['0%','70%'])
+    const textY = useTransform(scrollYProgress, [0,1], ['0%','110%'])
     const [isMobile, setIsMobile] = useState(window.innerWidth < 501);
     const [isTablet, setIsTablet] = useState(window.innerWidth >= 768 && window.innerWidth < 1024);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024 && window.innerWidth < 1440);
