@@ -94,20 +94,3 @@ Where ideas turn into interactive, real-world applications</p>
 export default AboutMe
 
 
-{/* <div ref={ref} className="body-space">
-
-  <div className="bg" />
-
-  <motion.div
-    className="earth"
-    style={{ y: planetY }}
-  />
-
-  <div className="text-layer">
-    <motion.div style={{ y: textY }}>
-      <h1>Brian Barker</h1>
-      <p>Enter My Orbit...</p>
-    </motion.div>
-  </div>
-
-</div> */}
