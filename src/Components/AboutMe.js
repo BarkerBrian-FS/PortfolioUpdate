@@ -9,8 +9,8 @@ const AboutMe = () => {
         target: ref,
         offset: ['start start','end start'],
     })
-    const backgroundY = useTransform(scrollYProgress, [1,0 ], ['0%', '100%']);
-    const textY = useTransform(scrollYProgress, [1,0], ['0%','70%'])
+    const backgroundY = useTransform(scrollYProgress, [0,1 ], ['0%', '-50%']);
+    const textY = useTransform(scrollYProgress, [0,1], ['0%','70%'])
     const [isMobile, setIsMobile] = useState(window.innerWidth < 501);
     const [isTablet, setIsTablet] = useState(window.innerWidth >= 768 && window.innerWidth < 1024);
     const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024 && window.innerWidth < 1440);
@@ -74,8 +74,8 @@ const AboutMe = () => {
   return (
     <>
     <div ref={ref} className='body-space' style = {styles.bodySpace}>
-        <div className='bg' style={{ backgroundImage: `url(${beginning})`}}>
-        <div className='earth' style ={{ backgroundImage: `radial-gradient(transparent 40%, black 75%),url(${beginningNoBg})`}}>
+        <div className='bg' style={{y:backgroundY, backgroundImage: `url(${beginning})`}}>
+        <div className='earth' style ={{ backgroundImage: `radial-gradient(transparent 40%, black 75%),url(${beginningNoBg})`}}/>
         <div style={styles.about}>
             <div style={styles.intro}>
                 <motion.div style={{y: textY}}className='intro'>
@@ -84,7 +84,6 @@ const AboutMe = () => {
 Where ideas turn into interactive, real-world applications</p>
                 </motion.div>
             </div>
-        </div>
         </div>
     </div>
     </div>
@@ -95,3 +94,20 @@ Where ideas turn into interactive, real-world applications</p>
 export default AboutMe
 
 
+{/* <div ref={ref} className="body-space">
+
+  <div className="bg" />
+
+  <motion.div
+    className="earth"
+    style={{ y: planetY }}
+  />
+
+  <div className="text-layer">
+    <motion.div style={{ y: textY }}>
+      <h1>Brian Barker</h1>
+      <p>Enter My Orbit...</p>
+    </motion.div>
+  </div>
+
+</div> */}
