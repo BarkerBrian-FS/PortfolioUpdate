@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import me from '../images/AboutBrian.png';
-import spacebg from '../images/spacebg.jpg';
+import beginning from '../images/Beginning.png';
 import './About.css';
 const AboutMe = () => {
 
@@ -78,7 +78,7 @@ const AboutMe = () => {
   return (
     <>
     <div className='body-space' style = {styles.bodySpace}>
-        <div className='bg' style={{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${spacebg})`}}>
+        <div className='bg' style={{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${beginning})`}}>
         <div style={styles.about}>
             <div style={styles.intro}>
                 <motion.div
