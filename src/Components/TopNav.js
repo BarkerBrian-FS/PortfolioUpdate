@@ -11,7 +11,7 @@ const Nav = () => {
     return (
         <header style={styles.myHeader}>
             <div className="logo" style={styles.logo}>
-                <h1>Portfolio</h1>
+                <h1>Creative Web Developer</h1>
             </div>
 
             {/* Hamburger Icon (Visible on Mobile) */}
