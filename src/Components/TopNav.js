@@ -52,7 +52,7 @@ const styles = {
     logo: {
         fontFamily: 'Anta, sans-serif',
         fontWeight: 500,
-        fontSize: '1.8rem',
+        fontSize: '1.3rem',
         marginLeft: '2.5%',
         color: '#e0e1dd',
     },
