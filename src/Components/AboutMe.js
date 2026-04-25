@@ -74,18 +74,20 @@ const AboutMe = () => {
   return (
     <>
     <div ref={ref} className='body-space' style = {styles.bodySpace}>
-        <div className='bg' style={{y:backgroundY, backgroundImage: `url(${beginning})`}}>
-        <div className='earth' style ={{ backgroundImage: `radial-gradient(transparent 40%, black 75%),url(${beginningNoBg})`}}/>
-        <div style={styles.about}>
-            <div style={styles.intro}>
-                <motion.div style={{y: textY}}className='intro'>
-                    <h1 style={styles.name} className='name'>Brian Barker</h1>
-                    <p style={styles.para} className='para'>Enter My Orbit
-Where ideas turn into interactive, real-world applications</p>
-                </motion.div>
+        <div className='sticky'>
+            <div className='bg' style={{backgroundImage: `url(${beginning})`}}>
+            <div className='earth' style ={{ backgroundImage: `radial-gradient(transparent 40%, black 75%),url(${beginningNoBg})`}}/>
+            <div style={styles.about}>
+                <div style={styles.intro}>
+                    <motion.div style={{y: textY}}className='intro'>
+                        <h1 style={styles.name} className='name'>Brian Barker</h1>
+                        <p style={styles.para} className='para'>Enter My Orbit
+            Where ideas turn into interactive, real-world applications</p>
+                    </motion.div>
+                </div>
             </div>
+                </div>
         </div>
-    </div>
     </div>
     </>
   )
