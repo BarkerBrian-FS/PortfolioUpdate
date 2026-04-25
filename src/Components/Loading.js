@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Lottie from 'react-lottie';
-import animationData from '../videos/SpinninLogo.json';
-import LogoBackground from '../images/LogoBackground.jpg';
+import animationData from '../videos/SpinninLogo_white.json';
+import LogoBg from '../images/LogoBg_dark.png';
 import { motion } from 'framer-motion';
 import './Loading.css';
 
@@ -62,7 +62,7 @@ const style = {
   zIndex: 9999,
   },
   backgroundImage: {
-    backgroundImage: `url(${LogoBackground})`,
+    backgroundImage: `url(${LogoBg})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     height: '100%',

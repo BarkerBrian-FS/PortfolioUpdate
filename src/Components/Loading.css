@@ -2,7 +2,7 @@
   top: 0;
   left: 0;
  
-  background-image: url('../images/LogoBackground.jpg');
+  background-image: url('../images/LogoBg_dark.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -21,7 +21,7 @@
     left: 0;
     height:max-content;
     width:max-content;
-    background-image: url('../images/LogoBackground.jpg');
+    background-image: url('../images/LogoBg_dark.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -37,7 +37,7 @@
       top: 0;
       left: 0;
      
-      background-image: url('../images/LogoBackground.jpg');
+      background-image: url('../images/LogoBg_dark.png');
       background-size: cover;
       background-position: center;
       display: flex;
@@ -52,7 +52,7 @@
     .loading {
       top: 0;
       left: 0;
-      background-image: url('../images/LogoBackground.jpg');
+      background-image: url('../images/LogoBg_dark.png');
       background-size: cover;
       background-position: center;
       display: flex;
