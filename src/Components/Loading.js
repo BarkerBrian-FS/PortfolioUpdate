@@ -9,12 +9,6 @@ const LoadingScreen = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [isExiting, setIsExiting] = useState(false);
 
-    // useEffect(() => {
-    //   // Simulate an API call or loading process
-    //   setTimeout(() => {
-    //     setIsLoading(false);
-    //   }, 2000); 
-    // }, []);
     useEffect(() => {
   setTimeout(() => {
     setIsExiting(true); // start exit animation
@@ -32,40 +26,19 @@ const LoadingScreen = () => {
         preserveAspectRatio: 'xMidYMid slice',
       },
     };
-  
-  //   return (
-  //     isLoading && (
-  //       <div className="loading" style={style.loadingScreen}>
-  //         <Lottie className="lottie-player" options={defaultOptions} style={style.lottieImage}  />
-  //       </div>
-  //     )
-  //   );
-  // };
 
   return (
   isLoading && (
     <motion.div
       className="loading"
       style={style.loadingScreen}
-      initial={{
-        clipPath: 'circle(150% at 50% 50%)',
-        opacity: 1
-      }}
+      initial={{ scale: 1, opacity: 1 }}
       animate={
         isExiting
-          ? {
-              clipPath: 'circle(0% at 50% 50%)',
-              opacity: 0
-            }
-          : {
-              clipPath: 'circle(150% at 50% 50%)',
-              opacity: 1
-            }
+        ? { scale: 4, opacity: 0 }
+        : { scale: 1, opacity: 1 }
       }
-      transition={{
-        duration: 0.8,
-        ease: 'easeInOut'
-      }}
+      transition={{ duration: 0.8, ease: 'easeInOut' }}
     >
       <Lottie
         className="lottie-player"
