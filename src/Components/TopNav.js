@@ -22,13 +22,22 @@ const Nav = () => {
             {/* Navigation Links */}
             <nav className={`navLink ${menuOpen ? 'active' : ''}`}>
                 <ul className="navList" style={styles.navList}>
-                        <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                        <motion.li whileHover={{ scale: 1.1, color: '#ffffff',
+                        textShadow: '0 0 10px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.8), 0 0 60px rgba(255,255,255,0.5)', }} 
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}>
                             <a href="#experience" style={styles.link} onClick={toggleMenu}>Experience</a>
                         </motion.li>
-                        <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                        <motion.li whileHover={{ scale: 1.1, color: '#ffffff',
+                        textShadow: '0 0 10px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.8), 0 0 60px rgba(255,255,255,0.5)', }} 
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}>
                             <a href="#projects" style={styles.link} onClick={toggleMenu}>Projects</a>
                         </motion.li>
-                        <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                        <motion.li whileHover={{ scale: 1.1, color: '#ffffff',
+                        textShadow: '0 0 10px rgba(255,255,255,1), 0 0 30px rgba(255,255,255,0.8), 0 0 60px rgba(255,255,255,0.5)', }} 
+                        whileTap={{ scale: 0.9 }}
+                        transition={{ duration: 0.3, ease: 'easeInOut' }}>
                             <a href="#contact" style={styles.link} onClick={toggleMenu}>Contact</a>
                         </motion.li>
                 </ul>
@@ -72,5 +81,7 @@ const styles = {
         margin: ".5rem",
         textDecoration: "none",
         color: '#e0e1dd',
+        
     },
+    
 };
