@@ -10,7 +10,7 @@ import cryptoWatch from '../videos/cryptoWatch.mp4';
 import asteroids from '../videos/asteroids.mp4';
 import mapBox from '../videos/mapBox.mp4';
 import './EmblaCarousel.css';
-import spaceBgProject from '../images/spaceBgProject.jpg';
+import speedyBoi from '../images/Speeding.png';
 import { motion } from 'framer-motion';
 
 
@@ -28,7 +28,7 @@ const EmblaCarousel = (props) => {
   } = usePrevNextButtons(emblaApi)
 
   return (
-    <div className='videoBg' style={{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${spaceBgProject})`}}>
+    <div className='videoBg' style={{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${speedyBoi})`}}>
       <div className='emblaCarousel' >
         <div className="embla" >
           <div className="embla__viewport" ref={emblaRef}>

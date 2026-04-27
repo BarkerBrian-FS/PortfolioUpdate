@@ -7,7 +7,7 @@ import nodejs from '../images/nodejs.png';
 import html from '../images/html.png';
 import react from '../images/physics.png';
 import mongo from '../images/mongodb.svg';
-import galaxyBg from '../images/galaxyBg.jpg';
+import portal from '../images/Portal.png';
 import './Experience.css';
 
 const skills = [
@@ -43,7 +43,7 @@ const Experience = () => {
             style={{
                 backgroundImage: `radial-gradient(transparent 40%, black 72%),
                 linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                url(${galaxyBg})`
+                url(${portal})`
             }}
         >
             {screenSize <= 500 && (
