@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import buttonPicture from '../images/buttonPicture.jpg';
-import spaceBg2 from '../images/spaceBg2.jpg';
+import alienCivil from '../images/AlienPortalCivilization.png';
 import './Contact.css';
 import ContactButtons from './ContactButtons';
 
@@ -32,7 +32,7 @@ export const ContactForm = () => {
   };
 
   return (
-      <div className='spaceBg2' style= {{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${spaceBg2})`}}>
+      <div className='spaceBg2' style= {{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${alienCivil})`}}>
         <form ref={form} onSubmit={sendEmail} style={style.form} className='contact-form'>
           <div style= {style.name} className='name'>
             <label className='label'>Name</label>
