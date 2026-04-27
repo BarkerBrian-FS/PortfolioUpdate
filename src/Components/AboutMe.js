@@ -7,7 +7,7 @@ const AboutMe = () => {
     const ref = useRef(null);
     const {scrollYProgress} = useScroll({
         target: ref,
-        offset: ['start start','end start'],
+        offset: ['center','end start'],
     })
     const backgroundY = useTransform(scrollYProgress, [0,1 ], ['0%', '-50%']);
     const textY = useTransform(scrollYProgress, [0,1], ['0%','110%'])
