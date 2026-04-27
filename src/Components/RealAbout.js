@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import me from '../images/AboutBrian.png';
-import spacebg from '../images/spacebg.jpg';
+import me from '../images/CroppedSpaceBoy.png';
+import spacebg from '../images/LogoBg_dark.png';
 import './About.css';
 const AboutMe = () => {
 
