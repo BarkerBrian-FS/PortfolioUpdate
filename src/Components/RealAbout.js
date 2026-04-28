@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import me from '../images/CroppedSpaceBoy.png';
-import spacebg from '../images/LogoBg_dark.png';
-import './About.css';
+import distantPortal from '../images/PortalInDistance.png';
+import './RealAbout.css';
 const AboutMe = () => {
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 501);
@@ -78,7 +78,7 @@ const AboutMe = () => {
   return (
     <>
     <div className='body-space' style = {styles.bodySpace}>
-        <div className='bg' style={{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${spacebg})`}}>
+        <div className='bg' style={{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${distantPortal})`}}>
         <div style={styles.about}>
             <div style={styles.intro}>
                 <motion.div
