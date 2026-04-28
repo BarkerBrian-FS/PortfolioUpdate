@@ -14,12 +14,70 @@ import speedyBoi from '../images/Speeding.png';
 import { motion } from 'framer-motion';
 
 
+// const EmblaCarousel = (props) => {
+//     const options = { loop: false }
+//   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Fade()])
+
+//   const slides = [{ src: asteroids, title: 'Asteroid Game' },
+//     { src: cryptoWatch, title: 'CryptoWatch' },{src: mapBox, title:'Property Management'}]
+//   const {
+//     prevBtnDisabled,
+//     nextBtnDisabled,
+//     onPrevButtonClick,
+//     onNextButtonClick
+//   } = usePrevNextButtons(emblaApi)
+
+//   return (
+//     <div className='videoBg' style={{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${speedyBoi})`}}>
+//       <div className='emblaCarousel' >
+//         <div className="embla" >
+//           <div className="embla__viewport" ref={emblaRef}>
+//             <div className="embla__container">
+//               {slides.map((slides, index) => (
+//                 <div className="embla__slide" key={index}>
+//                 <div className = 'title'>{slides.title}</div>
+//                   <video controls width="250"
+//                     className="embla__slide__img"
+//                     src={slides.src}
+//                   />
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+//           <div className="embla__controls">
+//             <div className="embla__buttons">
+//               <motion.div
+//               whileHover={{ scale: 1.1}}
+//               whileTap={{ scale: 0.9 }}
+//               className='prevButton'>
+//                 <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+//               </motion.div>
+//               <motion.div
+//               whileHover={{ scale: 1.1}}
+//               whileTap={{ scale: 0.9 }}>
+//                 <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+//               </motion.div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default EmblaCarousel
+
+
+
+
 const EmblaCarousel = (props) => {
-    const options = { loop: false }
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [Fade()])
+  const { options } = props
+  const [emblaRef, emblaApi] = useEmblaCarousel(options)
 
   const slides = [{ src: asteroids, title: 'Asteroid Game' },
     { src: cryptoWatch, title: 'CryptoWatch' },{src: mapBox, title:'Property Management'}]
+
+
   const {
     prevBtnDisabled,
     nextBtnDisabled,
@@ -29,41 +87,32 @@ const EmblaCarousel = (props) => {
 
   return (
     <div className='videoBg' style={{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${speedyBoi})`}}>
-      <div className='emblaCarousel' >
-        <div className="embla" >
-          <div className="embla__viewport" ref={emblaRef}>
-            <div className="embla__container">
-              {slides.map((slides, index) => (
-                <div className="embla__slide" key={index}>
-                <div className = 'title'>{slides.title}</div>
-                  <video controls width="250"
-                    className="embla__slide__img"
-                    src={slides.src}
+    <div className='emblaCarousel' >
+    <div className="embla" >
+      <div className="embla__viewport" ref={emblaRef}>
+        <div className="embla__container">
+          {slides.map((slides, index) => (
+            <div className="embla__slide" key={index}>
+            <div className = 'title'>{slides.title}</div>
+              <video controls width="250"
+                     className="embla__slide__img"
+                     src={slides.src}
                   />
-                </div>
-              ))}
             </div>
-          </div>
-          <div className="embla__controls">
-            <div className="embla__buttons">
-              <motion.div
-              whileHover={{ scale: 1.1}}
-              whileTap={{ scale: 0.9 }}
-              className='prevButton'>
-                <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-              </motion.div>
-              <motion.div
-              whileHover={{ scale: 1.1}}
-              whileTap={{ scale: 0.9 }}>
-                <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-              </motion.div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
+
+      <div className="embla__controls">
+        <div className="embla__buttons">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        </div>
+      </div>
+    </div>
+    </div>
     </div>
   )
 }
 
 export default EmblaCarousel
-
