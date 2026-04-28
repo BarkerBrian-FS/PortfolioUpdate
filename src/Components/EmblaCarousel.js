@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useEffect, useCallback} from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Fade from 'embla-carousel-fade';
 import {
@@ -85,20 +85,61 @@ const EmblaCarousel = (props) => {
     onNextButtonClick
   } = usePrevNextButtons(emblaApi)
 
+  const scaleSlides = useCallback(() => {
+  if (!emblaApi) return;
+
+  const scrollProgress = emblaApi.scrollProgress();
+  const scrollSnaps = emblaApi.scrollSnapList();
+
+  emblaApi.slideNodes().forEach((slide, index) => {
+    const diffToTarget = scrollSnaps[index] - scrollProgress;
+
+    const scale = 1 - Math.abs(diffToTarget) * 0.35;
+    const opacity = 1 - Math.abs(diffToTarget) * 0.6;
+    const translateY = Math.abs(diffToTarget) * 60;
+    const blur = Math.abs(diffToTarget) * 4;
+
+    slide.style.transform = `
+      scale(${Math.max(scale, 0.7)})
+      translateY(${translateY}px)
+    `;
+    slide.style.opacity = Math.max(opacity, 0.4);
+    slide.style.filter = `blur(${blur}px)`;
+  });
+}, [emblaApi]);
+
+useEffect(() => {
+  if (!emblaApi) return;
+
+  emblaApi.on("scroll", scaleSlides);
+  emblaApi.on("reInit", scaleSlides);
+
+  scaleSlides();
+}, [emblaApi, scaleSlides]);
+
+
   return (
     <div className='videoBg' style={{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${speedyBoi})`}}>
-    <div className='emblaCarousel' >
+    <motion.div className='emblaCarousel' 
+    initial={{opacity:0,scale:0.8,y:120,rotateX:20}}
+    whileInView={{opacity: 1,scale: 1,y: 0,rotateX: 0}}
+    transition={{duration: 3.0,ease: [0.22, 1, 0.36, 1]}}
+    viewport={{ once: true, amount: 0.4 }}>
     <div className="embla" >
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((slides, index) => (
-            <div className="embla__slide" key={index}>
-            <div className = 'title'>{slides.title}</div>
+          {slides.map((slide, index) => (
+            <motion.div className="embla__slide" key={index}
+            initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.08 }}
+                viewport={{ once: true }}>
+            <div className = 'title'>{slide.title}</div>
               <video controls width="250"
                      className="embla__slide__img"
-                     src={slides.src}
+                     src={slide.src}
                   />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -110,7 +151,7 @@ const EmblaCarousel = (props) => {
         </div>
       </div>
     </div>
-    </div>
+    </motion.div>
     </div>
   )
 }

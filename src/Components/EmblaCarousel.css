@@ -6,6 +6,10 @@
   background-position: center;
   background-size: cover;
 }
+.emblaCarousel {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
 .embla {
     max-width: 60rem;
     margin: auto;
@@ -22,10 +26,10 @@
     margin-left: calc(var(--slide-spacing) * -1);
   }
   .embla__slide {
-    transform: translate3d(0, 0, 0);
     flex: 0 0 var(--slide-size);
     min-width: 0;
     padding-left: var(--slide-spacing);
+    transition: transform 0.4s ease, opacity 0.3s ease, filter 0.3s ease;
   }
   .embla__slide__img {
     border-radius: 1.8rem;
