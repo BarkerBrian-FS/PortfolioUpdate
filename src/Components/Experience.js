@@ -11,13 +11,13 @@ import portal from '../images/Portal.png';
 import './Experience.css';
 
 const skills = [
-    { img: html, text: "HTML5", years: 3 },
-    { img: css, text: "CSS", years: 3 },
-    { img: js, text: "JavaScript", years: 3 },
-    { img: nodejs, text: "Node.js", years: 3 },
-    { img: react, text: "React.js", years: 3 },
-    { img: mongo, text: "MongoDB", years: 3 },
-    { img: figma, text: "Figma", years: 3 }
+    { img: html, text: "HTML5 • 4 yrs"},
+    { img: css, text: "CSS • 4 yrs" },
+    { img: js, text: "JavaScript • 4 yrs"},
+    { img: nodejs, text: "Node.js • 4 yrs" },
+    { img: react, text: "React.js • 4 yrs" },
+    { img: mongo, text: "MongoDB • 4 yrs" },
+    { img: figma, text: "Figma • 4 yrs" }
 ];
 
 const Experience = () => {
@@ -50,34 +50,44 @@ const Experience = () => {
                 <h1 style={styles.clickMeText}>Click Me!</h1>
             )}
             <div className="experience" style={styles.experience}>
-                {skills.map((skill, index) => (
-                    <motion.div
-                        key={index}
-                        className="exp-block"
-                        initial={{ opacity: 0, y: 50 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7, ease: "easeOut" }}
-                        viewport={{ once: true }}
-                        onClick={() => toggleSkillText(index)}
-                        style={{ cursor: screenSize <= 425 ? 'pointer' : 'default' }}
-                    >
-                        <div className='expContent' style={styles.expBlock(screenSize)}>
-                            <img
-                                className='expLogo'
-                                src={skill.img}
-                                alt={skill.text}
-                                loading="lazy"
-                                style={styles.logo(screenSize)}
-                            />
-                            {(screenSize > 500 || selectedSkill === index) && (
-                                <p className='expText' style={styles.text(screenSize)}>
-                                    {skill.years}+ years of experience with {skill.text}
-                                </p>
-                            )}
-                        </div>
-                    </motion.div>
-                ))}
-            </div>
+
+  <div className="orbitStage">
+
+    <div className="orbitCore">
+      Skills
+    </div>
+
+    {skills.map((skill, index) => (
+      <motion.div
+        key={index}
+        className="orbitItem"
+        style={{
+          "--i": index,
+          "--total": skills.length
+        }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true }}
+        onClick={() => toggleSkillText(index)}
+      >
+        <img
+          src={skill.img}
+          alt={skill.text}
+          className="orbitLogo"
+        />
+
+        {(screenSize > 500 || selectedSkill === index) && (
+          <p className="orbitText">
+            {skill.text}
+          </p>
+        )}
+      </motion.div>
+    ))}
+
+  </div>
+
+</div>
         </div>
     );
 };
@@ -87,12 +97,9 @@ export default Experience;
 const styles = {
     experience: {
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
         alignItems: 'center',
-        height: '80%',
-        marginTop: '60px',
-        flexWrap: 'wrap',
+        minHeight: '100vh',
         padding: '0 20px',
     },
     clickMeText: {
