@@ -80,8 +80,8 @@ const AboutMe = () => {
             <div style={styles.about}>
                 <div style={styles.intro}>
                     <motion.div style={{y: textY}}className='intro'>
-                        <h1 style={styles.name} className='name'>Brian Barker</h1>
-                        <p style={styles.para} className='para'>Enter My Orbit
+                        <h1 style={styles.name} className='about_name'>Brian Barker</h1>
+                        <p style={styles.para} className='about_para'>Enter My Orbit
             Where ideas turn into interactive, real-world applications</p>
                     </motion.div>
                 </div>

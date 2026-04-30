@@ -1,0 +1,21 @@
+.siteWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.sceneLayer {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background: black; /* IMPORTANT */
+}
+
+.uiLayer {
+  position: relative;
+  z-index: 2;
+}
