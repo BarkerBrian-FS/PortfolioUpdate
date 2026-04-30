@@ -77,33 +77,42 @@ const AboutMe = () => {
 
   return (
     <>
-    <div className='body-space' style = {styles.bodySpace}>
-        <div className='bg' style={{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${distantPortal})`}}>
-        <div style={styles.about}>
-            <div style={styles.intro}>
-                <motion.div
-                    animate={{ x:50 }}
-                    transition={{ ease: "easeOut", duration: 3 }}
-                    whileInView={ true }
-                    viewport={{ once: true }}>
-                    <h1 style={styles.name} className='name'>Brian Barker</h1>
-                    <p style={styles.para} className='para'>Welcome! I am a hardworking veteran looking to enter the tech field.
-                    I recently graduated from school for web development and design.
-                    I have a passion for creating in the digital space and would love to find a company where I can contribute and grow my skills.</p>
-                </motion.div>
-            </div>
-            <motion.div
+     <div className="aboutWrapper">
 
-                initial={{ scale: .025 }} // Start off-screen to right side
-                animate={{ scale: 1 }} // Move to the normal position when in view
-                //spring animation at the end of movement 
-                transition={{ type: 'spring', stiffness: 60, damping: 50 }}
-                viewport={{ once: true }}>
-                <img className='img' src={me} alt='me' style={styles.img}/>
-            </motion.div>
-        </div>
-        </div>
+    <div className="aboutContent">
+
+      {/* LEFT TEXT */}
+      <motion.div
+        className="aboutText"
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <h1 className="title">Brian Barker</h1>
+
+        <p className="introduction">
+          Welcome! I am a hardworking veteran looking to enter the tech field.
+          I recently graduated from school for web development and design.
+          I have a passion for creating in the digital space and would love to
+          find a company where I can contribute and grow my skills.
+        </p>
+      </motion.div>
+
+      {/* RIGHT IMAGE */}
+      <motion.div
+        className="aboutImage"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        <img src={me} alt="me" />
+      </motion.div>
+
     </div>
+
+  </div>
     </>
   )
 }
