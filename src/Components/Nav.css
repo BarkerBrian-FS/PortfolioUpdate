@@ -1,3 +1,62 @@
+.hudHeader {
+  position: relative;
+}
+.hudHeader * {
+  position: relative;
+  z-index: 2;
+}
+.hudHeader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 204, 0.08),
+    transparent
+  );
+
+  animation: hudScan 5s linear infinite;
+}
+
+
+.navList a {
+  font-family: Anta, sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+
+  color: rgba(224,225,221,0.75);
+
+  transition: all 0.25s ease;
+}
+.navList a:hover {
+  color: #00ffcc;
+  text-shadow:
+    0 0 10px rgba(0,255,204,0.6),
+    0 0 20px rgba(0,255,204,0.3);
+
+  transform: translateY(-2px);
+}
+
+
+@keyframes hudScan {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.navList a:hover {
+  color: #b63cfc;
+  text-shadow: 0 0 10px rgb(184, 62, 255);
+  letter-spacing: 2px;
+  filter: drop-shadow(0 0 6px rgba(174, 0, 255, 0.565));
+}
+
+
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 
 /* Tablet (max-width: 1024px) */
