@@ -38,19 +38,19 @@ const Nav = () => {
       <ul className="navList" style={styles.navList}>
 
         <motion.li whileHover={{ scale: 1.1 }}>
-          <a href="#about" className={active === "about" ? "activeLink" : ""} style={styles.link}>About</a>
+          <a href="#about" className={active === "about" ? "activeLink link" : "link"} style={styles.link}>About</a>
         </motion.li>
 
         <motion.li whileHover={{ scale: 1.1 }}>
-          <a href="#experience" className={active === "experience" ? "activeLink" : ""} style={styles.link}>Experience</a>
+          <a href="#experience" className={active === "experience" ? "activeLink link" : "link"} style={styles.link}>Experience</a>
         </motion.li>
 
         <motion.li whileHover={{ scale: 1.1 }}>
-          <a href="#projects" className={active === "projects" ? "activeLink" : ""} style={styles.link}>Projects</a>
+          <a href="#projects" className={active === "projects" ? "activeLink link" : "link"} style={styles.link}>Projects</a>
         </motion.li>
 
         <motion.li whileHover={{ scale: 1.1 }}>
-          <a href="#contact" className={active === "contact" ? "activeLink" : ""} style={styles.link}>Contact</a>
+          <a href="#contact" className={active === "contact" ? "activeLink link" : "link"} style={styles.link}>Contact</a>
         </motion.li>
 
       </ul>

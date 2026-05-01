@@ -37,8 +37,8 @@
 .navList a:hover {
   color: #c43bff;
   text-shadow:
-    0 0 10px rgba(0,255,204,0.6),
-    0 0 20px rgba(0,255,204,0.3);
+    0 0 10px rgba(160, 44, 255, 0.6),
+    0 0 20px rgba(178, 63, 255, 0.3);
 
   transform: translateY(-2px);
 }
