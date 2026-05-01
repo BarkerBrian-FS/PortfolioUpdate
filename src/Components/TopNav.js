@@ -9,6 +9,24 @@ const Nav = () => {
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
+    useEffect(() => {
+  const sections = document.querySelectorAll("section, div[id]");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActive(entry.target.id);
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
+
+  sections.forEach((sec) => observer.observe(sec));
+
+  return () => observer.disconnect();
+}, []);
     return (
   <header className="hudHeader" style={styles.myHeader}>
 
@@ -20,15 +38,19 @@ const Nav = () => {
       <ul className="navList" style={styles.navList}>
 
         <motion.li whileHover={{ scale: 1.1 }}>
-          <a href="#experience" style={styles.link}>Experience</a>
+          <a href="#about" className={active === "about" ? "activeLink" : ""} style={styles.link}>About</a>
         </motion.li>
 
         <motion.li whileHover={{ scale: 1.1 }}>
-          <a href="#projects" style={styles.link}>Projects</a>
+          <a href="#experience" className={active === "experience" ? "activeLink" : ""} style={styles.link}>Experience</a>
         </motion.li>
 
         <motion.li whileHover={{ scale: 1.1 }}>
-          <a href="#contact" style={styles.link}>Contact</a>
+          <a href="#projects" className={active === "projects" ? "activeLink" : ""} style={styles.link}>Projects</a>
+        </motion.li>
+
+        <motion.li whileHover={{ scale: 1.1 }}>
+          <a href="#contact" className={active === "contact" ? "activeLink" : ""} style={styles.link}>Contact</a>
         </motion.li>
 
       </ul>
