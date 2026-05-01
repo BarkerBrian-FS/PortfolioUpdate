@@ -102,7 +102,7 @@ link: {
   fontFamily: 'Anta, sans-serif',
   fontWeight: 200,
   fontSize: '1.1rem',
-    margin: ".5rem",
+  margin: ".5rem",
   textDecoration: "none",
 
   letterSpacing: '1px',

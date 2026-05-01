@@ -37,6 +37,7 @@
 .skillCard:hover {
   transform: translateY(-6px) scale(1.03);
   background: rgba(255,255,255,0.08);
+  border-color: rgba(198, 63, 255, 0.6);
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 

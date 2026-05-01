@@ -89,8 +89,12 @@ useEffect(() => {
 
       <div className="embla__controls">
         <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+            <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+            <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          </motion.div>
         </div>
       </div>
     </div>

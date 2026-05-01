@@ -65,8 +65,6 @@ const Experience = () => {
                     >
                         <img src={skill.img} alt={skill.name} />
 
-                        <p>{skill.name}</p>
-
                     <p className="skillName">{skill.name}</p>
                             <span className="skillMeta">{skill.years} yrs</span>
 
@@ -83,9 +81,6 @@ const Experience = () => {
 
 export default Experience;
 
-const styles = {
-   
-};
 
 
 
