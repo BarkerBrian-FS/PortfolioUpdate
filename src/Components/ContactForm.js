@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import buttonPicture from '../images/buttonPicture.jpg';
@@ -8,10 +8,11 @@ import ContactButtons from './ContactButtons';
 
 export const ContactForm = () => {
   const form = useRef();
+  const [sent, setSent] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+  
     emailjs
       .sendForm(
         'service_stmew67', 
@@ -24,6 +25,7 @@ export const ContactForm = () => {
         () => {
           console.log('SUCCESS!');
            form.current.reset(); 
+           setSent(true);
         },
         (error) => {
           console.log('FAILED...', error.text);
@@ -32,71 +34,63 @@ export const ContactForm = () => {
   };
 
   return (
-      <div className='spaceBg2' style= {{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${alienCivil})`}}>
-        <form ref={form} onSubmit={sendEmail} style={style.form} className='contact-form'>
-          <div style= {style.name} className='name'>
-            <label className='label'>Name</label>
-            <div><input type="text" name="user_name" /></div>
-          </div>
-          <div style= {style.email} className='email'>
-            <label className='label'>Email</label>
-            <div><input type="email" name="user_email" /></div>
-          </div>
-          <div style= {style.message}className='message'>
-            <div>
-              <label className='label'>Message</label>
-            </div>
-              <textarea name="message" />
-          </div>
-          <div className='submit'>
-            <motion.button
-            initial={{ backgroundColor: 'white',color: 'black',borderColor: 'black' }}
-            whileHover={{ scale: 1.1, backgroundImage: `url(${buttonPicture})`,color: 'white',borderColor: 'white' }}
-            whileTap={{ scale: 0.9 }}
-            
-            type="submit" style={style.input}>Send</motion.button>
-          </div>
-        </form>
-        <div className='contact-buttons'>
-          <ContactButtons/>
+    <div className="contactWrapper" style= {{backgroundImage: `radial-gradient(transparent 40%, black 72%),url(${alienCivil})`}}>
+
+      <motion.div
+      className="contactCard"
+      initial={{ opacity: 0, y: 30, scale: 0.98 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      >
+      <div className="contactCard">
+
+      <div className="terminalHeader">
+          <span>COMMUNICATION TERMINAL</span>
+          <span className="terminalStatus">
+            {sent ? "TRANSMISSION SENT" : "ONLINE"}
+          </span>
         </div>
+
+        <form ref={form} onSubmit={sendEmail} className="contactForm">
+
+          <h2 className="contactTitle">Contact Me</h2>
+
+          <div className="formGroup">
+            <label>Name</label>
+            <input type="text" name="user_name" required />
+          </div>
+
+          <div className="formGroup">
+            <label>Email</label>
+            <input type="email" name="user_email" required />
+          </div>
+
+          <div className="formGroup">
+            <label>Message</label>
+            <textarea name="message" rows="4" required />
+          </div>
+
+          <motion.button
+            className="submitBtn"
+            initial={{ backgroundColor: 'white',color: 'black',borderColor: 'black' }}
+            whileHover={{ scale: 1.07, backgroundImage: `url(${buttonPicture})`,color: 'white',borderColor: 'white' }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            type="submit"
+          >
+            Send
+          </motion.button>
+
+        </form>
+
+        <div className="contactButtons">
+          <ContactButtons />
+        </div>
+
       </div>
+    </motion.div>
+    </div>
   );
 };
 
 export default ContactForm;
-
-const style = {
-  form:{
-    display: 'flex',
-    flexDirection: 'column',
-    marginLeft: '36rem',
-    borderRadius: '3px',
-    height: '600px',
-  },
-  name:{
-    marginTop: '160px',
-    color: 'white',
-  },
-  email:{
-    marginTop: '15px',
-    color: 'white'
-  },
-  message:{
-    marginTop: '15px',
-    color: 'white'
-  },
-  input:{
-    width: '20%',
-    height: '40px',
-    marginLeft: '15%',
-    marginRight: 'auto',
-    marginTop: '15px',
-    borderRadius: '8px',
-    fontFamily: 'Anta, sans-serif',
-    fontWeight: 'bold',
-    fontStyle: 'normal',
-    fontSize: '1.5rem',
-  },
-
-}
