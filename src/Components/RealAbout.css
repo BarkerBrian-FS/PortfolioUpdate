@@ -43,6 +43,7 @@
 .aboutImage img {
   width: 100%;
   max-width: 450px;
+  max-height: 650px;
   height: auto;
   object-fit: contain;
 }
