@@ -8,11 +8,14 @@ import ContactButtons from './ContactButtons';
 
 export const ContactForm = () => {
   const form = useRef();
+  const [scanning, setScanning] = useState(false);
   const [sent, setSent] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
-  
+    
+    setScanning(true); // start radar
+
     emailjs
       .sendForm(
         'service_stmew67', 
@@ -21,16 +24,20 @@ export const ContactForm = () => {
         publicKey: 
         'huqTxf4ikvWEbKvV6',
       })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-           form.current.reset(); 
-           setSent(true);
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
+       .then(() => {
+      form.current.reset();
+
+      setTimeout(() => {
+        setScanning(false);
+        setSent(true);
+
+        setTimeout(() => setSent(false), 3000);
+      }, 1200); // radar duration
+    })
+    .catch((err) => {
+      setScanning(false);
+      console.log(err);
+    });
   };
 
   return (
@@ -43,7 +50,7 @@ export const ContactForm = () => {
       transition={{ duration: 0.6, ease: "easeOut" }}
       >
       <div className="contactCard">
-
+    {scanning && <div className="radarOverlay" />}
       <div className="terminalHeader">
           <span>COMMUNICATION TERMINAL</span>
           <span className="terminalStatus">
