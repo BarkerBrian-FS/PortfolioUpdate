@@ -3,8 +3,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   padding: 2rem;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
 }
 
 .contactWrapper::before {

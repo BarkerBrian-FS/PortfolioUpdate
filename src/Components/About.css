@@ -50,7 +50,7 @@
   font-style: normal;
   font-size: 2rem;
   color:white;
-  margin-top: -4rem;
+  margin-top: -5rem;
   margin-left: 20rem;
   margin-right: 10rem;
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.517);
@@ -103,6 +103,7 @@
 
 @media (min-width: 768px) {
   /* Tablet */
+  
 }
 
 @media (min-width: 1024px) {
