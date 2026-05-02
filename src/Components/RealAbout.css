@@ -107,6 +107,22 @@
 
 
 
+@media (min-width: 768px) {
+  /* Tablet */
+}
+
+@media (min-width: 1024px) {
+  /* Small laptop */
+}
+
+@media (min-width: 1280px) {
+  /* Desktop */
+}
+
+@media (min-width: 1536px) {
+  /* Large screens */
+}
+
 
 
 
