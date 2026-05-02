@@ -73,20 +73,7 @@
 
 
 @media screen and (max-width: 1024px) and (min-width: 769px) { /* Tablet */
-  .about {
-    flex-direction: column;
-    text-align: center;
-  }
-  .name {
-
-    margin-left: 0;
-
-  }
-  .para {
-    font-size: 1.25rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
+  
   
 }
 
