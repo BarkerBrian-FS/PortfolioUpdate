@@ -9,15 +9,12 @@ function App() {
     <div>
       {/* 🧱 UI LAYER */}
       <div className="uiLayer">
-
         <LoadingScreen />
-
         <section>
           <Routes>
             <Route path="/" element={<About />} />
           </Routes>
         </section>
-
       </div>
     </div>
 

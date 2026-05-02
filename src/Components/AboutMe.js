@@ -36,39 +36,6 @@ const AboutMe = () => {
             maxWidth: isLargeScreen ? '100%' : '100%',
             margin: isLargeScreen ? '0 auto' : '0',
         },
-        name: {
-            // color: 'white',
-            // fontFamily: 'Anta, sans-serif',
-            // fontWeight: 'bold',
-            // fontStyle: 'normal',
-            // fontSize: isMobile ? '2rem' 
-            //     : isTablet ? '3rem' 
-            //     : isDesktop ? '4rem' 
-            //     : '5rem', // Large screen font size
-            // marginLeft: isMobile ? '10rem': '10rem',
-            // marginTop: isMobile ? '5rem' : isLargeScreen ? '20rem' : '20rem',
-        },
-        para: {
-            // fontFamily: 'Anta, sans-serif',
-            // fontWeight: 400,
-            // fontStyle: 'normal',
-            // fontSize: isMobile ? '1rem' 
-            //     : isTablet ? '1.2rem' 
-            //     : isDesktop ? '1.5rem' 
-            //     : '1.8rem', // Larger text for large screens
-            // color: 'white',
-            // margin: isMobile ? '0rem' : isLargeScreen ? '0rem 20rem -2rem 10rem' : '0rem 20rem -2rem 10rem',
-            // marginRight: isMobile ? '-5rem' : isLargeScreen ? '-10rem' : '10rem',
-            // marginBottom: isMobile ? '2rem' : '10rem',
-            // maxWidth: isLargeScreen ? '70%' : '100%',
-            // backgroundImage: isMobile ? 'linear-gradient(to right, transparent 1%, black 100%)': 'linear-gradient(to right, transparent 100%, black 0%)',
-        },
-        bodySpace: {
-            // width: '100%',
-            // height: '100%',
-            // overflowX: 'hidden',
-            // overflowY: 'hidden',
-        }
     };
 
   return (
