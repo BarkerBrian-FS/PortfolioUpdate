@@ -101,7 +101,7 @@
 
 .submitBtn {
   padding: 10px;
-
+  
   border: none;
   border-radius: 8px;
 
@@ -112,16 +112,21 @@
 
   background: white;
   color: black;
+
+  width: auto;
+  align-self: center;
 }
 
 .contactButtons {
-   margin-left: 0;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;    
   justify-content: center;
-  flex-wrap: wrap;
-  max-width: 100%;
-  overflow: hidden;
+  align-items: center;
+  gap: 16px;               
+  width: 100%;
+  margin-top: 1.5rem;
+
 }
 
 

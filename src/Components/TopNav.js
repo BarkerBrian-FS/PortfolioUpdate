@@ -85,7 +85,6 @@ myHeader: {
   border: '1px solid rgba(0,255,204,0.15)',
   borderRadius: '12px',
 
-  overflow: 'hidden',
 },
 
 navList: {

@@ -19,13 +19,13 @@ const AboutMe = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h1 className="title">Brian Barker</h1>
+        <h1 className="title">Web Developer Focused on Craft and Growth</h1>
 
         <p className="introduction">
-          Welcome! I am a hardworking veteran looking to enter the tech field.
-          I recently graduated from school for web development and design.
-          I have a passion for creating in the digital space and would love to
-          find a company where I can contribute and grow my skills.
+          I’m a veteran and web developer focused on creating clean, 
+          engaging digital experiences. With a foundation in web development 
+          and design, I’m looking to join a team where I can contribute 
+          meaningfully while continuing to grow as a developer.
         </p>
       </motion.div>
 
