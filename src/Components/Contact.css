@@ -320,6 +320,27 @@
     font-size: 2.5rem;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .contactWrapper {
+    min-height: 100svh;
+    padding: 4rem 1rem 2rem;
+  }
+
+  .contactCard {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    font-size: 1rem;
+  }
+
+  .contactButtons {
+    flex-direction: row;
+  }
+}
   
   
   

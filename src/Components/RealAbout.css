@@ -110,6 +110,30 @@
   /* Large screens */
 }
 
+@media screen and (max-width: 768px) {
+  .aboutWrapper {
+    min-height: 100svh;
+    padding: 6rem 1rem 3rem;
+  }
+
+  .aboutContent {
+    width: 100%;
+    gap: 2rem;
+  }
+
+  .title {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+
+  .introduction {
+    font-size: clamp(1.05rem, 4.5vw, 1.8rem);
+  }
+
+  .aboutImage img {
+    max-width: min(82vw, 360px);
+    max-height: 52vh;
+  }
+}
 
 
 

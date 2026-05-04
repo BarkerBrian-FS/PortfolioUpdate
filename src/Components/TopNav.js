@@ -67,7 +67,7 @@ myHeader: {
   padding: '0.8rem 1.5rem',
 
   display: 'flex',
-  justifyContent: 'center',   
+  justifyContent: 'center',
   alignItems: 'center',
 
   position: 'fixed',
@@ -112,5 +112,5 @@ link: {
 nav: {
     marginRight: '3%',
 },
-    
+
 };
