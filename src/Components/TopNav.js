@@ -80,10 +80,7 @@ myHeader: {
 
   zIndex: 1000,
 
-  background: 'rgba(0,0,0,0.4)',
-  backdropFilter: 'blur(10px)',
-  border: '1px solid rgba(0,255,204,0.15)',
-  borderRadius: '12px',
+
 
 },
 
