@@ -394,6 +394,9 @@
   .contactButtons {
     flex-direction: row;
   }
+  .submitBtn{
+    margin-right: 4rem;
+  }
 }
   
   
