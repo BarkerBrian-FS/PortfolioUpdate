@@ -74,7 +74,7 @@
   text-shadow: 0 0 20px rgba(255, 255, 255, 0.517);
 }
 
-@media (max-width: 480px){
+/* @media (max-width: 480px){
    .bodySpace{
     height: 50%;
     width: 100%;
@@ -94,8 +94,6 @@
     margin-right: 5rem;
   }
 
-
-
   .about_para{
     align-items: center;
     justify-content: center;
@@ -112,7 +110,7 @@
     left: 50%;
 
   }
-}
+} */
 
 @media screen and (max-width: 768px){ /* // Phone */
   .bodySpace{
@@ -130,21 +128,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 5rem;
-    margin-top: 11rem;
+    gap: 30px;
+    margin-left: 3rem;
+    margin-top: 15rem;
     padding: 0 16px;
   }
   .sticky,
   .earth {
     height: 100svh;
-    margin-bottom: 3.5rem;
+    margin-bottom: 5rem;
   }
   .about_name {
     margin-left: 0;
     font-size: clamp(3rem, 13vw, 6rem);
   }
   .about_para {
-    max-width: 34rem;
+    max-width: 20rem;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
