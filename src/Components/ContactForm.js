@@ -78,14 +78,18 @@ export const ContactForm = () => {
           </div>
 
           <motion.button
-            className="submitBtn"
-            initial={{ backgroundColor: 'white',color: 'black',borderColor: 'black' }}
-            whileHover={{ scale: 1.07, backgroundImage: `url(${buttonPicture})`,color: 'white',borderColor: 'white' }}
+            className={`submitBtn ${scanning ? "sending" : ""} ${sent ? "sent" : ""}`}
+            whileHover={{ scale: 1.07}}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
             type="submit"
+            disabled={scanning} // prevents spam clicks
           >
-            Send
+            {scanning
+              ? "> SCANNING..."
+              : sent
+              ? "> TRANSMISSION SENT"
+              : "> EXECUTE TRANSMISSION"}
           </motion.button>
 
         </form>

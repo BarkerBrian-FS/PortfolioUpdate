@@ -95,26 +95,79 @@
 
 .formGroup input:focus,
 .formGroup textarea:focus {
-  border-color: #da69ff;
-  box-shadow: 0 0 8px rgb(194, 86, 248);
+  border-color: #42f948;
+  box-shadow: 0 0 8px rgb(71, 249, 51);
 }
 
 .submitBtn {
   padding: 10px;
   
-  border: none;
-  border-radius: 8px;
+  border: 1px solid rgba(0,255,204,0.4);
+  letter-spacing: 1px;
+  border-radius: 6px;
 
   font-family: Anta, sans-serif;
   font-size: 1rem;
 
   cursor: pointer;
-
-  background: white;
-  color: black;
-
+  overflow: hidden;
+  
+  background: transparent;
+  color: #00ffcc;
+  
   width: auto;
   align-self: center;
+  transition: all 0.25s ease;
+}
+
+.submitBtn.sending {
+  color: #00ffcc;
+  border-color: #00ffcc;
+
+  box-shadow:
+    0 0 10px rgba(0,255,204,0.5),
+    inset 0 0 10px rgba(0,255,204,0.2);
+
+  animation: pulse 1s infinite;
+}
+
+/* success state */
+.submitBtn.sent {
+  color: #00ff88;
+  border-color: #00ff88;
+
+  box-shadow:
+    0 0 12px rgba(0,255,136,0.6),
+    inset 0 0 10px rgba(0,255,136,0.3);
+}
+
+/* subtle pulse animation */
+@keyframes pulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+.submitBtn::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0,255,204,0.3),
+    transparent
+  );
+
+  transition: 0.4s;
+}
+
+.submitBtn:hover::before {
+  left: 100%;
 }
 
 .contactButtons {
@@ -141,7 +194,7 @@
 }
 
 .terminalStatus {
-  color: #6c63ff;
+  color: #4bfa45;
 }
 
 .terminalHeader {
