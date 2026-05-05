@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-import buttonPicture from '../images/buttonPicture.jpg';
 import alienCivil from '../images/AlienPortalCivilization.png';
 import './Contact.css';
 import ContactButtons from './ContactButtons';
