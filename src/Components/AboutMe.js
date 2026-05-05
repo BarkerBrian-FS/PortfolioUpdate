@@ -9,7 +9,7 @@ const AboutMe = () => {
         target: ref,
         offset: ['center','end start'],
     })
-    const backgroundY = useTransform(scrollYProgress, [0,1 ], ['0%', '-50%']);
+    
     const textY = useTransform(scrollYProgress, [0,1], ['0%','110%']);
 
     const styles = {
