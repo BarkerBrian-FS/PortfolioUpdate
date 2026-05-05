@@ -102,7 +102,7 @@
 .submitBtn {
   padding: 10px;
   
-  border: 1px solid rgba(0,255,204,0.4);
+  border: 1px solid rgba(100, 253, 92, 0.4);
   letter-spacing: 1px;
   border-radius: 6px;
 
@@ -111,9 +111,9 @@
 
   cursor: pointer;
   overflow: hidden;
-  
+
   background: transparent;
-  color: #00ffcc;
+  color: #42f94b;
   
   width: auto;
   align-self: center;
@@ -204,7 +204,7 @@
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
 
-  color: #00ffcc;
+  color: #4bf85a;
   opacity: 0.8;
 }
 
