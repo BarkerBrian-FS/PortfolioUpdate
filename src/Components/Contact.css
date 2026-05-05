@@ -299,7 +299,7 @@
   }
 
   .radarOverlay {
-    opacity: 0.6; /* reduce visual noise on small screens */
+    display: none;
   }
 }
 
