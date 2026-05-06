@@ -28,6 +28,7 @@
 }
 
 .contactCard {
+  will-change: transform, opacity;
   position: relative; 
   box-sizing: border-box;
   overflow: hidden;
@@ -133,12 +134,12 @@
 
 /* success state */
 .submitBtn.sent {
-  color: #00ff88;
-  border-color: #00ff88;
+  color: #39ff14;
+  border-color: #39ff14;
 
   box-shadow:
-    0 0 12px rgba(0,255,136,0.6),
-    inset 0 0 10px rgba(0,255,136,0.3);
+    0 0 12px rgba(57,255,20,0.6),
+    inset 0 0 10px rgba(57,255,20,0.6);
 }
 
 /* subtle pulse animation */
@@ -168,6 +169,16 @@
 
 .submitBtn:hover::before {
   left: 100%;
+}
+
+.submitBtn.sending::after {
+  content: "_";
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
 }
 
 .contactButtons {
@@ -237,8 +248,8 @@
     transparent 60deg
   );
 
-  animation: radarSpin 2s linear infinite;
-  opacity: 0.5;
+  animation: radarSpin 1.2s linear infinite;
+ 
 }
 
 @keyframes radarSpin {
@@ -304,7 +315,7 @@
   }
 }
 
-@media (min-width: 768px) {/* Tablet */
+@media (max-width: 768px) {/* Tablet */
    .contactCard {
     max-width: 100%;
     padding: 16px;
