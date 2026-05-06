@@ -237,7 +237,8 @@
     transparent 60deg
   );
 
-  animation: radarSpin 1.2s linear infinite;
+  animation: radarSpin 2s linear infinite;
+  opacity: 0.5;
 }
 
 @keyframes radarSpin {
@@ -343,6 +344,9 @@
 
   .submitBtn:hover {
     box-shadow: none; /* mobile doesn't need hover glow */
+  }
+  .radarOverlay {
+    display: none;
   }
 }
 
