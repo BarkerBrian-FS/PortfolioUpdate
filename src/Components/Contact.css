@@ -42,7 +42,7 @@
   padding: 20px;
 
   background: rgba(0, 0, 0, 0.343);
-  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.6);
 
   border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.1);
@@ -335,6 +335,14 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
+  }
+  .submitBtn {
+    font-size: 0.95rem;
+    padding: 14px;
+  }
+
+  .submitBtn:hover {
+    box-shadow: none; /* mobile doesn't need hover glow */
   }
 }
 

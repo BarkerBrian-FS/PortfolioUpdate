@@ -43,7 +43,7 @@
 .intro{
   display: flex;
   flex-direction: column;
-  margin-left: 4rem;
+  margin-left: 3rem;
   z-index: 1;
   align-items: center;
   justify-content: center;
@@ -58,7 +58,7 @@
   font-style: normal;
   font-size: clamp(3rem, 8vw, 10rem);
   margin-left: 10rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
   text-shadow: 0 0 20px rgba(223, 221, 221, 0.648);
 }
 
