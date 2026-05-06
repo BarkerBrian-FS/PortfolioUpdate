@@ -89,11 +89,13 @@
   border-radius: 6px;
   border: none;
 
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 255, 204, 0.3);
   color: white;
 
   outline: none;
   outline: none;
+
+  caret-color: #00ffcc;
   
 }
 
