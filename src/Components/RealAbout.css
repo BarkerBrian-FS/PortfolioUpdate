@@ -26,7 +26,7 @@
 }
 .title {
   font-family: Anta, sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 .introduction {
@@ -46,18 +46,6 @@
   max-height: 650px;
   height: auto;
   object-fit: contain;
-}
-.name{
-  color: white;
-  font-family: Anta, sans-serif;
-  text-align: center;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 10rem;
-  margin-left: 10rem;
-  margin-top: 2rem;
-  text-shadow: 0 0 20px rgba(223, 221, 221, 0.648);
-  
 }
 .para{
   font-family: Anta, sans-serif;
