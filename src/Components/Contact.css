@@ -89,7 +89,7 @@
   border-radius: 6px;
   border: none;
 
-  background: rgba(0, 255, 204, 0.3);
+  background: rgba(80, 247, 58, 0.3);
   color: white;
 
   outline: none;
@@ -103,6 +103,7 @@
 .formGroup textarea:focus {
   border-color: #42f948;
   box-shadow: 0 0 8px rgb(71, 249, 51);
+  
 }
 
 .submitBtn {

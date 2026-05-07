@@ -62,19 +62,19 @@ export const ContactForm = () => {
 
           <h2 className="contactTitle">Contact Me</h2>
 
-          <div className="formGroup">
-            <label>Name</label>
-            <input type="text" name="user_name" required />
-          </div>
-
-          <div className="formGroup">
-            <label>Email</label>
-            <input type="email" name="user_email" required />
-          </div>
-
-          <div className="formGroup">
-            <label>Message</label>
-            <textarea name="message" rows="4" required />
+          <div className="terminalInput">
+            <div className="formGroup">
+              <label>Name</label>
+              <input type="text" name="user_name" required />
+            </div>
+            <div className="formGroup">
+              <label>Email</label>
+              <input type="email" name="user_email" required />
+            </div>
+            <div className="formGroup">
+              <label>Message</label>
+              <textarea name="message" rows="4" required />
+            </div>
           </div>
 
           <motion.button
