@@ -125,6 +125,7 @@
   width: auto;
   align-self: center;
   transition: all 0.25s ease;
+  margin-right: 4rem;
 }
 
 .submitBtn.sending {
