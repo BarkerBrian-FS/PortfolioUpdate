@@ -164,8 +164,11 @@
 }
 
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   /* Tablet */
+  .embla__viewport{
+    margin: 15px
+  }
 }
 
 @media (min-width: 1024px) {
