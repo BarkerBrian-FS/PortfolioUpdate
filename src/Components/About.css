@@ -220,7 +220,19 @@
   }
 }
 
+@media (min-width: 1536px) and (max-width: 1600px){
+  .intro{
+    margin-left: 6rem;
+    margin-top: -2rem;
+  }
+  
+  .about_para{
+    margin-left: 19rem;
+    max-width: 42rem;
+    text-align: center;
 
+  }
+}
 
 
 
